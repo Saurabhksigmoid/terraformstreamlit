@@ -35,7 +35,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_D2pds_v5"
-    # vm_size    = "Standard_DS2_v2"
   }
 
   identity {
@@ -76,4 +75,14 @@ output "kube_config" {
 output "acr_login_server" {
   value = azurerm_container_registry.acr.login_server
 }
+
+output "acr_admin_username" {
+  value = azurerm_container_registry.acr.admin_username
+}
+
+output "acr_admin_password" {
+  value = azurerm_container_registry.acr.admin_password
+  sensitive = true
+}
+
 
