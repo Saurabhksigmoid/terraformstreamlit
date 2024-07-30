@@ -1,4 +1,4 @@
-name: CI for Streamlit App
+name: CI for Streamlit2 App
 
 on:
   push:
